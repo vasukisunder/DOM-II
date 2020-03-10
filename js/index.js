@@ -40,8 +40,8 @@ para1.addEventListener('mousemove', () => {
     para1.style.fontSize = '20px';
 })
 
-welcome.addEventListener('select', (event) => {
-    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
-
-    welcome.style.backgroundColor = 'purple';
+para2.addEventListener('cut', (event) => {
+    const selection = document.getSelection();
+    selection.deleteFromDocument();
+    event.preventDefault();
 })
