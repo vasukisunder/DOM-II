@@ -1,11 +1,24 @@
 // Your code goes here
 
-
+allnav.addEventListener('click', () => {
+    allnav.style.backgroundColor = 'rebeccapurple';
+})
 document.querySelectorAll('.nav-link').forEach(el => {
     el.addEventListener('click', () => {
         el.style.color = 'pink';
     })
 })
+
+document.querySelector('.nav-link').addEventListener('click', (event) => {
+    event.preventDefault();
+})
+
+about.addEventListener('click', () => {
+    about.style.color = 'hotpink';
+    about.style.backgroundColor = 'black';
+    event.stopPropagation()
+})
+
 
 pic1.addEventListener('mouseover', () => {
     pic1.style.transform = 'scale(1.2)';
@@ -44,4 +57,12 @@ para2.addEventListener('cut', (event) => {
     const selection = document.getSelection();
     selection.deleteFromDocument();
     event.preventDefault();
+})
+
+welcome.addEventListener('copy', () =>{
+    welcome.style.color = 'blue';
+})
+
+window.addEventListener('resize', () => {
+    lets.innerText = 'You resized the window!';
 })
